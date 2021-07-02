@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @update.summary %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @update.body %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @update.priority %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @update.area %>
+</p>
+
+<p>
+  <strong>On:</strong>
+  <%= @update.on %>
+</p>
+
+<p>
+  <strong>Private:</strong>
+  <%= @update.private %>
+</p>
+
+<%= link_to 'Edit', edit_update_path(@update) %> |
+<%= link_to 'Back', updates_path %>

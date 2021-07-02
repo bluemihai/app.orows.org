@@ -1,0 +1,47 @@
+<%= form_with(model: update, local: true) do |form| %>
+  <% if update.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(update.errors.count, "error") %> prohibited this update from being saved:</h2>
+
+      <ul>
+        <% update.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :summary %>
+    <%= form.text_field :summary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :priority %>
+    <%= form.number_field :priority %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area %>
+    <%= form.number_field :area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :on %>
+    <%= form.date_select :on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :private %>
+    <%= form.check_box :private %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
