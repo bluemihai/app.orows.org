@@ -26,3 +26,6 @@ updates = [
     area: 2,
   }
 ]
+updates.each do |update|
+  Update.create(update)
+end
